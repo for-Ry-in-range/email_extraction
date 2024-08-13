@@ -33,7 +33,7 @@ export default function CreateInbox() {
                 send_to: user.primaryEmailAddress.emailAddress
               }
             });
-            /*const result = await fetch('https://emailextraction-git-main-for-ry-in-ranges-projects.vercel.app/api/get_inboxes')
+            const result = await fetch('https://emailextraction-git-main-for-ry-in-ranges-projects.vercel.app/api/get_inboxes')
             const inboxes = await result.json()
             console.log(inboxes)
             let tempNameEmail: [string, string][] = []
@@ -43,7 +43,6 @@ export default function CreateInbox() {
               }
             })
             setNameEmail(tempNameEmail)
-            */
             window.location.reload();
           } catch(error) {
             console.error("Error:", error)
