@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'; // Import the 'React' namespace from the 'react' package
 import {
   ClerkProvider,
