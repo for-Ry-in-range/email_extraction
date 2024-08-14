@@ -1,3 +1,4 @@
+"use client"
 import { serve } from "inngest/next";
 import { inngest } from "../../../../inngest/client";
 import {sendToAnth} from "../../../../inngest/functions";
