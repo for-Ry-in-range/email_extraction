@@ -12,9 +12,7 @@ export const sendToAnth = inngest.createFunction(
   { id: "send-anth" },
   { event: "myfunc/send.anth" },
   async ({ event, step }) => { 
-    console.log("SEND TO ANTHROPIC")
     try {
-      console.log("Got inside sendToAuth")
       const data = event.data
       const afterPlus = data.envelope.to.split('+').slice(1); // Getting the part after the +
       const withoutDomain = afterPlus[0].split('@')[0]
@@ -88,9 +86,6 @@ export const createInbox = inngest.createFunction(
   {event: "myfunc/create-inbox"},
   async ({event, step}) => {
     const data = event.data
-    console.log("name", data.name)
-    console.log("prompt", data.prompt)
-    console.log("send_to", data.send_to)
     try {
       const new_inbox = await prisma.inbox.create({
         data: {
