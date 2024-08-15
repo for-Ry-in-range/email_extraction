@@ -37,7 +37,6 @@ export default function CreateInbox() {
             })
             const result = await fetch('https://emailextraction-for-ry-in-ranges-projects.vercel.app/api/get_inboxes')
             const inboxes = await result.json()
-            console.log(inboxes)
             let tempNameEmail: [string, string][] = []
             Object.entries(inboxes).forEach(([key, value]: [string, any]) => {
               if (value.name && value.cloudmailin) {
@@ -58,13 +57,10 @@ export default function CreateInbox() {
     try {
       const result = await fetch('https://emailextraction-for-ry-in-ranges-projects.vercel.app/api/get_inboxes')
       const inboxes = await result.json()
-      console.log(inboxes)
       let tempNameEmail: [string, string][] = []
       Object.entries(inboxes).forEach(([key, value]: [string, any]) => {
-        console.log("Inside forEach")
         if (value.name && value.cloudmailin) {
           tempNameEmail = tempNameEmail.concat([[value.name, value.cloudmailin]])
-          console.log(tempNameEmail)
         }
       })
       setNameEmail(tempNameEmail)
