@@ -7,6 +7,7 @@ import { useUser } from "@clerk/nextjs";
 import { Textarea } from "@/components/ui/textarea"
 import { Input } from "@/components/ui/input"
 import { Label } from "@radix-ui/react-label";
+
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
@@ -55,7 +56,7 @@ export default function CreateInbox() {
 
   const updateEmails = async () => {
     try {
-      const result = await fetch('https://emailextraction-git-main-for-ry-in-ranges-projects.vercel.app/api/get_inboxes')
+      const result = await fetch('https://emailextraction-for-ry-in-ranges-projects.vercel.app/api/get_inboxes')
       const inboxes = await result.json()
       console.log(inboxes)
       let tempNameEmail: [string, string][] = []
