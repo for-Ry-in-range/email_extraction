@@ -14,8 +14,10 @@ export async function POST(req: Request) {
                     send_to: parsedBody.send_to
                 }
             });
+            return new Response('', { status: 200 });
         } else {
             console.error("Missing data in request body");
         }
     }
+    return new Response('Unsuccessful', { status: 400 });
 }
