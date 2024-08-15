@@ -7,7 +7,6 @@ import { useUser } from "@clerk/nextjs";
 import { Textarea } from "@/components/ui/textarea"
 import { Input } from "@/components/ui/input"
 import { Label } from "@radix-ui/react-label";
-
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
