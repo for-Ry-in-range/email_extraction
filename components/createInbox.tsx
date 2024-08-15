@@ -112,7 +112,7 @@ export default function CreateInbox() {
       <ul>
         <br/>
         {nameEmail.map((name) => (
-          <li key={name[1]}>{name[0]}: <a href={`mailto:460d6ee3760a17630822+"${name[1]}"@cloudmailin.net`} className="italic text-gray-500">460d6ee3760a17630822+{name[1]}@cloudmailin.net</a></li>
+          <li key={name[1]}>{name[0]}: <a href={`mailto:460d6ee3760a17630822+${name[1]}@cloudmailin.net`} className="italic text-gray-500">460d6ee3760a17630822+{name[1]}@cloudmailin.net</a></li>
         ))}
       </ul>
     </>
