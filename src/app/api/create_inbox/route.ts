@@ -1,9 +1,9 @@
 import { inngest } from "../../../../inngest/client";
 import { IncomingMessage } from 'http';
 
-export async function POST(req: IncomingMessage) {
+export async function POST(req: Request) {
     let parsedBody: any = null;
-    if (req.headers['Content-Type'] === 'application/json') {
+    if (req.headers.get('Content-Type') === 'application/json') {
         let body = '';
         (req as any).on('data', (chunk: { toString: () => string; }) => {
             body += chunk.toString();
