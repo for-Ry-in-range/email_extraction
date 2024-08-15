@@ -22,7 +22,7 @@ export default function RootLayout({
     <html>
       <body>
         <ClerkProvider>
-          <main className="mx-auto w-2/5 min-h-screen flex-col justify-between p-24 max-w-screen-xl">
+          <main className="min-h-screen flex-col justify-between p-24">
               <SignedOut>
                 <SignInButton />
               </SignedOut>
