@@ -24,7 +24,7 @@ export default function CreateInbox() {
       if (user) {
         if (~isLoaded && user.primaryEmailAddress) {
           try {
-            await fetch('https://emailextraction-git-main-for-ry-in-ranges-projects.vercel.app/api/create_inbox', {
+            await fetch('https://emailextraction-for-ry-in-ranges-projects.vercel.app/api/create_inbox', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ export default function CreateInbox() {
                 send_to: user.primaryEmailAddress.emailAddress
               })
             })
-            const result = await fetch('https://emailextraction-git-main-for-ry-in-ranges-projects.vercel.app/api/get_inboxes')
+            const result = await fetch('https://emailextraction-for-ry-in-ranges-projects.vercel.app/api/get_inboxes')
             const inboxes = await result.json()
             console.log(inboxes)
             let tempNameEmail: [string, string][] = []
