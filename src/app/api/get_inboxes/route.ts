@@ -12,7 +12,6 @@ export async function GET() {
   try {
     await initializePrisma();
     const user = await currentUser();
-    console.log("got to GET")
     if (!user) {
         return new Response('Not signed in', { status: 400 });
     }
