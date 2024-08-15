@@ -2,15 +2,9 @@ import { inngest } from "../../../../inngest/client";
 import { IncomingMessage } from 'http';
 
 export async function POST(req: Request) {
-    let parsedBody: any = null;
     if (req.headers.get('Content-Type') === 'application/json') {
-        let body = '';
-        (req as any).on('data', (chunk: { toString: () => string; }) => {
-            body += chunk.toString();
-        });
-        (req as any).on('end', () => {
-            parsedBody = JSON.parse(body);
-        });
+        const requestBody = await req.text();
+        const parsedBody = JSON.parse(requestBody);
         if (parsedBody) {
             await inngest.send({
                 name: "myfunc/create-inbox",
