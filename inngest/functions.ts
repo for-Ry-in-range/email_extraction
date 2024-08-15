@@ -12,6 +12,7 @@ export const sendToAnth = inngest.createFunction(
   { id: "send-anth" },
   { event: "myfunc/send.anth" },
   async ({ event, step }) => { 
+    console.log("SEND TO ANTHROPIC")
     try {
       console.log("Got inside sendToAuth")
       const data = event.data
