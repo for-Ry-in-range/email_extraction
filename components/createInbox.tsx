@@ -54,7 +54,7 @@ export default function CreateInbox() {
 
   const updateEmails = async () => {
     try {
-      const result = await fetch('http://localhost:3000/api/get_inboxes')
+      const result = await fetch('https://emailextraction-for-ry-in-ranges-projects.vercel.app/api/get_inboxes')
       const inboxes = await result.json()
       console.log(inboxes)
       let tempNameEmail: [string, string][] = []
