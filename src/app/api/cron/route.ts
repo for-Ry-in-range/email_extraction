@@ -1,6 +1,6 @@
 import { inngest } from "../../../../inngest/client";
 
-export async function POST() {
+export async function GET() {
     try {
         await inngest.send({
           name: "myfunc/send-summary"
