@@ -5,6 +5,7 @@ export async function GET() {
         await inngest.send({
           name: "myfunc/send-summary"
         });
+        console.log("Cron worked")
         return new Response("Successful!", { status: 200 });
     } catch (error) {
         console.error("Error:", error)
