@@ -1,5 +1,7 @@
 import { inngest } from "../../../../inngest/client";
 
+export const dynamic = 'force-dynamic'
+
 export async function GET() {
     console.log("Cron worked")
     try {
