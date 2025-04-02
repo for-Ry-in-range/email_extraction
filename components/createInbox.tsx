@@ -69,10 +69,7 @@ export default function CreateInbox() {
   }
 
   useEffect(() => {
-    if (isStart) {
-      updateEmails()
-      setIsStart(false)
-    }
+    updateEmails()
   }, [])
 
   return (
