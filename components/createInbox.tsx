@@ -73,7 +73,7 @@ export default function CreateInbox() {
       updateEmails()
       setIsStart(false)
     }
-  }, [isStart])
+  }, [])
 
   return (
     <>
