@@ -22,7 +22,7 @@ export default function CreateInbox() {
     event.preventDefault();
     if (nameValue != "" && promptValue != "") {
       if (user) {
-        if (~isLoaded && user.primaryEmailAddress) {
+        if (isLoaded && user.primaryEmailAddress) {
           try {
             await fetch('https://emailextraction-for-ry-in-ranges-projects.vercel.app/api/create_inbox', {
               method: 'POST',
