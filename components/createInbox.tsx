@@ -44,7 +44,6 @@ export default function CreateInbox() {
               }
             })
             setNameEmail(tempNameEmail)
-            window.location.reload();
           } catch(error) {
             console.error("Error:", error)
           }
